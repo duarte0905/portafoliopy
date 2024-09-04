@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portafolio</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- navbar -->
+    <nav class="navbar">
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="link-group" id="navbar-links">
+            <li class="link"><a href="{{url_for('home')}}">inicio</a></li>
+            <li class="link"><a href="{{url_for('proyecto')}}">Proyecto</a></li>
+            <li class="link"><a href="{{url_for('habilidades')}}">habilidades</a></li>
+            <li class="link"><a href="{{url_for('contacto')}}">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+
+{% block body%}
+
+
+
+{% endblock %}
+
+
+<script>
+document.getElementById('menu-icon').addEventListener('click', function() {
+    const navbarLinks = document.getElementById('navbar-links');
+    navbarLinks.classList.toggle('active');
+});
+</script>
+
+
+
+</body>
+</html>
